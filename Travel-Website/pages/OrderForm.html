@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>Booking Form</title>
+    <meta name="description" content="A blog website about travelling">
+    <meta name="author" content="Dominykas">
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+    <a href="#" class="logo">Booking Form</a>
+    <ul class="main-nav" id="js-menu">
+        <li>
+            <a href="../index.html" class="nav-links">Home</a>
+        </li>
+        <li>
+			<a href="./AboutUsComponent.html" class="nav-links">About Us</a>
+        </li>
+        <li>
+			<a href="./OrderForm.html" class="nav-links">Booking Form</a>
+        </li>
+        <li>
+            <a href="./BlogsComponent.html" class="nav-links">Blogs</a>
+        </li>
+    </ul>
+</nav>
+<section>
+
+  
+	  <main role="main">
+  
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+		  <div class="container">
+			<h1 class="display-3">Use this form to book your travel</h1>
+			  <form>
+				  <div class="form-group">
+				  <label for="usr">Name:</label>
+				  <input type="text" class="form-control" id="usr">
+				  </div>
+				  <div class="form-group">
+				  <label for="pwd">Password:</label>
+				  <input type="password" class="form-control" id="pwd">
+				  </div>
+				  <div class="form-group">
+				  <label for="dte">Pick date:</label>
+				  <input type="date" class="form-control" id="dte" />
+				  </div>
+				  <div class="form-group">
+				  <label for="sel1">Destinations:</label>
+				  <select class="form-control" id="selDest">
+				  <option>Rome</option>
+				  <option>Delhi</option>
+				  <option>Los Angeles</option>
+				  <option>Rio de Janeiro</option>
+				  <option>Paris</option>
+				  <option>Abuja</option>
+				  </select>
+				  </div>
+			
+			  
+			<p><a class="btn btn-outline-success btn-lg" href="#" role="button" onclick="confBook();">Book now »</a></p>
+			<script>
+		  function confBook(){
+			  var nameOfUser = document.getElementById("usr").value;
+			  var dateOfTravel = document.getElementById("dte").value;
+			  console.log(dateOfTravel);
+			  document.getElementById("yourBooking").innerHTML = "The booking is for "+nameOfUser + " on the " + dateOfTravel;
+		  }
+		</script>
+		  </div>
+		</div>
+	</form>
+		
+  
+		<div class="container">
+		  <!-- Example row of columns -->
+		  <div class="row">
+			<div class="col-md-4">
+			  <h2>Your Booking confirmation:</h2>
+			  <p id="yourBooking"></p>
+			  <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+			</div>
+	
+		  </div>
+  
+		  <hr>
+  
+		</div> <!-- /container -->
+</section>
+</main>
+
+
+
+  <div class="clear-div"></div>
+
+    <footer class="footer">
+        <p class="footer-content">© 2021 - Dominykas, All Copyrights Reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
